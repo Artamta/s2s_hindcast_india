@@ -1,0 +1,992 @@
+=====================================================================
+                 SPIRE S2S DATASET: COMPLETE DEEP MANIFEST           
+=====================================================================
+Generated via automated pipeline
+
+
+######################################################################
+ GROUP PATH: /
+######################################################################
+
+[1] DIMENSIONS & CORE AXES:
+  * Total Dimensions: {}
+
+[2] DATA VARIABLES MANIFEST:
+  (No data variables explicitly exposed in this group context)
+
+######################################################################
+ GROUP PATH: anomalies
+######################################################################
+
+[1] DIMENSIONS & CORE AXES:
+  * Total Dimensions: {'reference_time': 90, 'step': 46, 'latitude': 361, 'longitude': 720, 'isobar': 4}
+  * Coordinate 'isobar': shape=(4,), dtype=float64
+  * Coordinate 'latitude': shape=(361,), dtype=float64
+  * Coordinate 'reference_time': shape=(90,), dtype=datetime64[ns]
+    - Temporal Range : 2026-01-01 00:00 TO 2026-03-31 00:00
+    - Step Frequency : Count=90
+  * Coordinate 'longitude': shape=(720,), dtype=float64
+  * Coordinate 'step': shape=(46,), dtype=timedelta64[D]
+    - Forecast Steps : Min=1 days, Max=46 days (Total Steps: 46)
+
+[2] DATA VARIABLES MANIFEST:
+  • Variable Name: 'air_pressure_at_sea_level'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Mean sea level pressure
+    - Units      : Pa
+    - Data Scale : (Attributes Metadata: {'standard_name': 'air_pressure_at_mean_sea_level', 'units': 'Pa', 'long_name': 'Mean sea level pressure', 'description': 'Atmospheric pressure reduced to mean sea level. 24-hour ensemble mean.'})
+
+  • Variable Name: 'air_temperature_min'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 2m minimum air temperature
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'standard_name': 'air_temperature', 'units': 'K', 'long_name': '2m minimum air temperature', 'cell_methods': 'time: minimum', 'description': 'Minimum air temperature at 2 metres above the surface over the 24-hour forecast period. Ensemble minimum.'})
+
+  • Variable Name: 'geopotential_height'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Geopotential height at pressure levels
+    - Units      : m
+    - Data Scale : (Attributes Metadata: {'standard_name': 'geopotential_height', 'units': 'm', 'long_name': 'Geopotential height at pressure levels', 'description': 'Height of isobaric pressure surfaces above mean sea level. Anomaly relative to ERA5 1991-2020 climatology.'})
+
+  • Variable Name: 'air_temperature_max'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 2m maximum air temperature
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'standard_name': 'air_temperature', 'units': 'K', 'long_name': '2m maximum air temperature', 'cell_methods': 'time: maximum', 'description': 'Maximum air temperature at 2 metres above the surface over the 24-hour forecast period. Ensemble maximum.'})
+
+  • Variable Name: 'geopotential_thickness'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Geopotential thickness
+    - Units      : m
+    - Data Scale : (Attributes Metadata: {'standard_name': 'geopotential_height', 'units': 'm', 'long_name': 'Geopotential thickness', 'description': 'Thickness between isobaric pressure surfaces. 24-hour ensemble mean.'})
+
+  • Variable Name: 'precipitation_amount'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Accumulated precipitation
+    - Units      : kg m-2
+    - Data Scale : (Attributes Metadata: {'standard_name': 'precipitation_amount', 'units': 'kg m-2', 'long_name': 'Accumulated precipitation', 'description': 'Total accumulated precipitation over the 24-hour forecast period, computed as the ensemble mean.'})
+
+  • Variable Name: 'surface_downwelling_shortwave_flux'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Surface downwelling shortwave flux
+    - Units      : W m-2
+    - Data Scale : (Attributes Metadata: {'standard_name': 'surface_downwelling_shortwave_flux_in_air', 'units': 'W m-2', 'long_name': 'Surface downwelling shortwave flux', 'description': 'Downwelling shortwave (solar) radiation at the surface, comprising both direct and diffuse components. 24-hour ensemble mean.'})
+
+  • Variable Name: 'wind_speed'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 10m wind speed
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'wind_speed', 'units': 'm s-1', 'long_name': '10m wind speed', 'description': 'Wind speed at 10 metres above the surface. 24-hour ensemble mean.'})
+
+  • Variable Name: 'wind_speed_100m'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 100m wind speed
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'wind_speed', 'units': 'm s-1', 'long_name': '100m wind speed', 'description': 'Wind speed at 100 metres above the surface. 24-hour ensemble mean.'})
+
+  • Variable Name: 'temperature'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Air temperature at pressure levels
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'standard_name': 'air_temperature', 'units': 'K', 'long_name': 'Air temperature at pressure levels', 'description': 'Air temperature at isobaric levels. Anomaly relative to ERA5 1991-2020 climatology.'})
+
+
+######################################################################
+ GROUP PATH: mean_stddev
+######################################################################
+
+[1] DIMENSIONS & CORE AXES:
+  * Total Dimensions: {'reference_time': 90, 'step': 46, 'latitude': 361, 'longitude': 720, 'isobar': 4}
+  * Coordinate 'latitude': shape=(361,), dtype=float64
+  * Coordinate 'reference_time': shape=(90,), dtype=datetime64[ns]
+    - Temporal Range : 2026-01-01 00:00 TO 2026-03-31 00:00
+    - Step Frequency : Count=90
+  * Coordinate 'isobar': shape=(4,), dtype=float64
+  * Coordinate 'longitude': shape=(720,), dtype=float64
+  * Coordinate 'step': shape=(46,), dtype=timedelta64[D]
+    - Forecast Steps : Min=1 days, Max=46 days (Total Steps: 46)
+
+[2] DATA VARIABLES MANIFEST:
+  • Variable Name: 'air_pressure_at_sea_level'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Mean sea level pressure
+    - Units      : Pa
+    - Data Scale : (Attributes Metadata: {'standard_name': 'air_pressure_at_mean_sea_level', 'units': 'Pa', 'long_name': 'Mean sea level pressure', 'description': 'Atmospheric pressure reduced to mean sea level. 24-hour ensemble mean.'})
+
+  • Variable Name: 'air_pressure_at_sea_level_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of Mean sea level pressure
+    - Units      : Pa
+    - Data Scale : (Attributes Metadata: {'units': 'Pa', 'long_name': 'Ensemble std dev of Mean sea level pressure', 'description': 'Standard deviation across ensemble members of atmospheric pressure reduced to mean sea level. 24-hour ensemble mean.'})
+
+  • Variable Name: 'air_temperature_at_isobaric_levels_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Ensemble std dev of Air temperature at pressure levels
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'units': 'K', 'long_name': 'Ensemble std dev of Air temperature at pressure levels', 'description': 'Standard deviation across ensemble members of air temperature at isobaric levels. 24-hour ensemble mean.'})
+
+  • Variable Name: 'air_temperature'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 2m air temperature
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'standard_name': 'air_temperature', 'units': 'K', 'long_name': '2m air temperature', 'description': 'Air temperature at 2 metres above the surface. 24-hour ensemble mean.'})
+
+  • Variable Name: 'air_temperature_min'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 2m minimum air temperature
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'standard_name': 'air_temperature', 'units': 'K', 'long_name': '2m minimum air temperature', 'cell_methods': 'time: minimum', 'description': 'Minimum air temperature at 2 metres above the surface over the 24-hour forecast period. Ensemble minimum.'})
+
+  • Variable Name: 'air_temperature_max_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of 2m maximum air temperature
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'units': 'K', 'long_name': 'Ensemble std dev of 2m maximum air temperature', 'description': 'Standard deviation across ensemble members of maximum air temperature at 2 metres above the surface over the 24-hour forecast period. Ensemble maximum.'})
+
+  • Variable Name: 'air_temperature_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of 2m air temperature
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'units': 'K', 'long_name': 'Ensemble std dev of 2m air temperature', 'description': 'Standard deviation across ensemble members of air temperature at 2 metres above the surface. 24-hour ensemble mean.'})
+
+  • Variable Name: 'eastward_wind_at_isobaric_levels_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Ensemble std dev of Eastward wind at pressure levels
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': 'Ensemble std dev of Eastward wind at pressure levels', 'description': 'Standard deviation across ensemble members of eastward wind component at isobaric levels. 24-hour ensemble mean.'})
+
+  • Variable Name: 'air_temperature_max'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 2m maximum air temperature
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'standard_name': 'air_temperature', 'units': 'K', 'long_name': '2m maximum air temperature', 'cell_methods': 'time: maximum', 'description': 'Maximum air temperature at 2 metres above the surface over the 24-hour forecast period. Ensemble maximum.'})
+
+  • Variable Name: 'eastward_wind'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 10m eastward wind
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'eastward_wind', 'units': 'm s-1', 'long_name': '10m eastward wind', 'description': 'Eastward component of the 10m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'eastward_wind_100m'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 100m eastward wind
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'eastward_wind', 'units': 'm s-1', 'long_name': '100m eastward wind', 'description': 'Eastward component of the 100m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'eastward_wind_100m_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of 100m eastward wind
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': 'Ensemble std dev of 100m eastward wind', 'description': 'Standard deviation across ensemble members of eastward component of the 100m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'geopotential_height_at_isobaric_levels_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Ensemble std dev of Geopotential height at pressure levels
+    - Units      : m
+    - Data Scale : (Attributes Metadata: {'units': 'm', 'long_name': 'Ensemble std dev of Geopotential height at pressure levels', 'description': 'Standard deviation across ensemble members of height of isobaric pressure surfaces above mean sea level. 24-hour ensemble mean.'})
+
+  • Variable Name: 'air_temperature_min_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of 2m minimum air temperature
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'units': 'K', 'long_name': 'Ensemble std dev of 2m minimum air temperature', 'description': 'Standard deviation across ensemble members of minimum air temperature at 2 metres above the surface over the 24-hour forecast period. Ensemble minimum.'})
+
+  • Variable Name: 'eastward_wind_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of 10m eastward wind
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': 'Ensemble std dev of 10m eastward wind', 'description': 'Standard deviation across ensemble members of eastward component of the 10m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'geopotential_thickness'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Geopotential thickness
+    - Units      : m
+    - Data Scale : (Attributes Metadata: {'standard_name': 'geopotential_height', 'units': 'm', 'long_name': 'Geopotential thickness', 'description': 'Thickness between isobaric pressure surfaces. 24-hour ensemble mean.'})
+
+  • Variable Name: 'northward_wind_100m'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 100m northward wind
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'northward_wind', 'units': 'm s-1', 'long_name': '100m northward wind', 'description': 'Northward component of the 100m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'northward_wind_100m_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of 100m northward wind
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': 'Ensemble std dev of 100m northward wind', 'description': 'Standard deviation across ensemble members of northward component of the 100m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'geopotential_thickness_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of Geopotential thickness
+    - Units      : m
+    - Data Scale : (Attributes Metadata: {'units': 'm', 'long_name': 'Ensemble std dev of Geopotential thickness', 'description': 'Standard deviation across ensemble members of thickness between isobaric pressure surfaces. 24-hour ensemble mean.'})
+
+  • Variable Name: 'air_temperature_at_isobaric_levels'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Air temperature at pressure levels
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'standard_name': 'air_temperature', 'units': 'K', 'long_name': 'Air temperature at pressure levels', 'description': 'Air temperature at isobaric levels. 24-hour ensemble mean.'})
+
+  • Variable Name: 'eastward_wind_at_isobaric_levels'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Eastward wind at pressure levels
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'eastward_wind', 'units': 'm s-1', 'long_name': 'Eastward wind at pressure levels', 'description': 'Eastward wind component at isobaric levels. 24-hour ensemble mean.'})
+
+  • Variable Name: 'northward_wind'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 10m northward wind
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'northward_wind', 'units': 'm s-1', 'long_name': '10m northward wind', 'description': 'Northward component of the 10m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'precipitation_amount_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of Accumulated precipitation
+    - Units      : kg m-2
+    - Data Scale : (Attributes Metadata: {'units': 'kg m-2', 'long_name': 'Ensemble std dev of Accumulated precipitation', 'description': 'Standard deviation across ensemble members of total accumulated precipitation over the 24-hour forecast period, computed as the ensemble mean.'})
+
+  • Variable Name: 'northward_wind_at_isobaric_levels_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Ensemble std dev of Northward wind at pressure levels
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': 'Ensemble std dev of Northward wind at pressure levels', 'description': 'Standard deviation across ensemble members of northward wind component at isobaric levels. 24-hour ensemble mean.'})
+
+  • Variable Name: 'northward_wind_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of 10m northward wind
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': 'Ensemble std dev of 10m northward wind', 'description': 'Standard deviation across ensemble members of northward component of the 10m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'precipitation_amount'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Accumulated precipitation
+    - Units      : kg m-2
+    - Data Scale : (Attributes Metadata: {'standard_name': 'precipitation_amount', 'units': 'kg m-2', 'long_name': 'Accumulated precipitation', 'description': 'Total accumulated precipitation over the 24-hour forecast period, computed as the ensemble mean.'})
+
+  • Variable Name: 'specific_humidity_at_isobaric_levels'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Specific humidity at pressure levels
+    - Units      : kg kg-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'specific_humidity', 'units': 'kg kg-1', 'long_name': 'Specific humidity at pressure levels', 'description': 'Mass of water vapor per unit mass of moist air at isobaric levels. 24-hour ensemble mean.'})
+
+  • Variable Name: 'geopotential_height_at_isobaric_levels'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Geopotential height at pressure levels
+    - Units      : m
+    - Data Scale : (Attributes Metadata: {'standard_name': 'geopotential_height', 'units': 'm', 'long_name': 'Geopotential height at pressure levels', 'description': 'Height of isobaric pressure surfaces above mean sea level. 24-hour ensemble mean.'})
+
+  • Variable Name: 'northward_wind_at_isobaric_levels'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Northward wind at pressure levels
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'northward_wind', 'units': 'm s-1', 'long_name': 'Northward wind at pressure levels', 'description': 'Northward wind component at isobaric levels. 24-hour ensemble mean.'})
+
+  • Variable Name: 'wind_speed'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 10m wind speed
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'wind_speed', 'units': 'm s-1', 'long_name': '10m wind speed', 'description': 'Wind speed at 10 metres above the surface. 24-hour ensemble mean.'})
+
+  • Variable Name: 'wind_speed_at_isobaric_levels'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Wind speed at pressure levels
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'wind_speed', 'units': 'm s-1', 'long_name': 'Wind speed at pressure levels', 'description': 'Wind speed at isobaric levels. 24-hour ensemble mean.'})
+
+  • Variable Name: 'ttr_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of Top thermal radiation
+    - Units      : W m-2
+    - Data Scale : (Attributes Metadata: {'units': 'W m-2', 'long_name': 'Ensemble std dev of Top thermal radiation', 'description': 'Standard deviation across ensemble members of net upward longwave (thermal) radiation flux at the top of the atmosphere. 24-hour ensemble mean. ECMWF nomenclature: ttr (top net thermal radiation).'})
+
+  • Variable Name: 'surface_downwelling_shortwave_flux'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Surface downwelling shortwave flux
+    - Units      : W m-2
+    - Data Scale : (Attributes Metadata: {'standard_name': 'surface_downwelling_shortwave_flux_in_air', 'units': 'W m-2', 'long_name': 'Surface downwelling shortwave flux', 'description': 'Downwelling shortwave (solar) radiation at the surface, comprising both direct and diffuse components. 24-hour ensemble mean.'})
+
+  • Variable Name: 'surface_downwelling_shortwave_flux_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of Surface downwelling shortwave flux
+    - Units      : W m-2
+    - Data Scale : (Attributes Metadata: {'units': 'W m-2', 'long_name': 'Ensemble std dev of Surface downwelling shortwave flux', 'description': 'Standard deviation across ensemble members of downwelling shortwave (solar) radiation at the surface, comprising both direct and diffuse components. 24-hour ensemble mean.'})
+
+  • Variable Name: 'wind_speed_100m'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: 100m wind speed
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'standard_name': 'wind_speed', 'units': 'm s-1', 'long_name': '100m wind speed', 'description': 'Wind speed at 100 metres above the surface. 24-hour ensemble mean.'})
+
+  • Variable Name: 'wind_speed_100m_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of 100m wind speed
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': 'Ensemble std dev of 100m wind speed', 'description': 'Standard deviation across ensemble members of wind speed at 100 metres above the surface. 24-hour ensemble mean.'})
+
+  • Variable Name: 'ttr'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Top thermal radiation
+    - Units      : W m-2
+    - Data Scale : (Attributes Metadata: {'standard_name': 'toa_net_upward_longwave_flux', 'units': 'W m-2', 'long_name': 'Top thermal radiation', 'description': 'Net upward longwave (thermal) radiation flux at the top of the atmosphere. 24-hour ensemble mean. ECMWF nomenclature: ttr (top net thermal radiation).'})
+
+  • Variable Name: 'specific_humidity_at_isobaric_levels_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Ensemble std dev of Specific humidity at pressure levels
+    - Units      : kg kg-1
+    - Data Scale : (Attributes Metadata: {'units': 'kg kg-1', 'long_name': 'Ensemble std dev of Specific humidity at pressure levels', 'description': 'Standard deviation across ensemble members of mass of water vapor per unit mass of moist air at isobaric levels. 24-hour ensemble mean.'})
+
+  • Variable Name: 'wind_speed_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Ensemble std dev of 10m wind speed
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': 'Ensemble std dev of 10m wind speed', 'description': 'Standard deviation across ensemble members of wind speed at 10 metres above the surface. 24-hour ensemble mean.'})
+
+  • Variable Name: 'wind_speed_at_isobaric_levels_stddev'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'isobar', 'latitude', 'longitude') | Shape=(90, 46, 4, 361, 720)
+    - Description: Ensemble std dev of Wind speed at pressure levels
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': 'Ensemble std dev of Wind speed at pressure levels', 'description': 'Standard deviation across ensemble members of wind speed at isobaric levels. 24-hour ensemble mean.'})
+
+
+######################################################################
+ GROUP PATH: regimes
+######################################################################
+
+[1] DIMENSIONS & CORE AXES:
+  * Total Dimensions: {'reference_time': 90, 'step': 46, 'conus_regime': 5, 'euatl_regime': 8}
+  * Coordinate 'conus_regime': shape=(5,), dtype=<U32
+  * Coordinate 'reference_time': shape=(90,), dtype=datetime64[ns]
+    - Temporal Range : 2026-01-01 00:00 TO 2026-03-31 00:00
+    - Step Frequency : Count=90
+  * Coordinate 'step': shape=(46,), dtype=int32
+    - Forecast Steps : Min=1, Max=46 (Total Steps: 46)
+  * Coordinate 'euatl_regime': shape=(8,), dtype=<U32
+
+[2] DATA VARIABLES MANIFEST:
+  • Variable Name: 'conus'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'conus_regime') | Shape=(90, 46, 5)
+    - Description: Probability of each Contiguous United States weather regime
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'long_name': 'Probability of each Contiguous United States weather regime', 'standard_name': 'probability', 'units': '1', 'valid_range': [0.0, 1.0], 'region': 'CONUS', 'region_long_name': 'Contiguous United States', 'description': 'Per-(reference_time, step, conus_regime) probability that the named large-scale circulation regime is active over the Contiguous United States (CONUS) domain. Probabilities across the regime dim sum to ~1.0 for each (issuance, lead) combination. Source: SAIFS S2S regime CSV daily file.'})
+
+  • Variable Name: 'euatl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'euatl_regime') | Shape=(90, 46, 8)
+    - Description: Probability of each Europe-Atlantic sector weather regime
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'long_name': 'Probability of each Europe-Atlantic sector weather regime', 'standard_name': 'probability', 'units': '1', 'valid_range': [0.0, 1.0], 'region': 'EUATL', 'region_long_name': 'Europe-Atlantic sector', 'description': 'Per-(reference_time, step, euatl_regime) probability that the named large-scale circulation regime is active over the Europe-Atlantic sector (EUATL) domain. Probabilities across the regime dim sum to ~1.0 for each (issuance, lead) combination. Source: SAIFS S2S regime CSV daily file.'})
+
+
+######################################################################
+ GROUP PATH: probabilities
+######################################################################
+
+[1] DIMENSIONS & CORE AXES:
+  * Total Dimensions: {'reference_time': 90, 'step': 46, 'latitude': 361, 'longitude': 720}
+  * Coordinate 'latitude': shape=(361,), dtype=float64
+  * Coordinate 'longitude': shape=(720,), dtype=float64
+  * Coordinate 'step': shape=(46,), dtype=timedelta64[D]
+    - Forecast Steps : Min=1 days, Max=46 days (Total Steps: 46)
+  * Coordinate 'reference_time': shape=(90,), dtype=datetime64[ns]
+    - Temporal Range : 2026-01-01 00:00 TO 2026-03-31 00:00
+    - Step Frequency : Count=90
+
+[2] DATA VARIABLES MANIFEST:
+  • Variable Name: 'air_pressure_at_sea_level_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Mean sea level pressure above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Mean sea level pressure above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_pressure_at_sea_level_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Mean sea level pressure in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Mean sea level pressure in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_pressure_at_sea_level_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Mean sea level pressure in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Mean sea level pressure in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_pressure_at_sea_level_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Mean sea level pressure in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Mean sea level pressure in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_max_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m maximum air temperature above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m maximum air temperature above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_max_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m maximum air temperature in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m maximum air temperature in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_pressure_at_sea_level_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Mean sea level pressure in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Mean sea level pressure in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_pressure_at_sea_level_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Mean sea level pressure in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Mean sea level pressure in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_pressure_at_sea_level_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Mean sea level pressure in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Mean sea level pressure in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_min_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m minimum air temperature in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m minimum air temperature in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_min_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m minimum air temperature in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m minimum air temperature in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_min_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m minimum air temperature in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m minimum air temperature in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_max_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m maximum air temperature in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m maximum air temperature in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_max_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m maximum air temperature in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m maximum air temperature in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_max_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m maximum air temperature in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m maximum air temperature in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_max_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m maximum air temperature in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m maximum air temperature in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_min_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m minimum air temperature in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m minimum air temperature in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_min_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m minimum air temperature above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m minimum air temperature above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_min_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m minimum air temperature in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m minimum air temperature in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_min_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m minimum air temperature in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m minimum air temperature in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m air temperature in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m air temperature in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m air temperature in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m air temperature in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m air temperature above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m air temperature above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m air temperature in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m air temperature in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_max_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m maximum air temperature in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m maximum air temperature in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_100m_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m eastward wind in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m eastward wind in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m air temperature in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m air temperature in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_100m_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m eastward wind in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m eastward wind in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m air temperature in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m air temperature in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m eastward wind above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m eastward wind above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_100m_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m eastward wind in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m eastward wind in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_100m_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m eastward wind in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m eastward wind in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_100m_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m eastward wind in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m eastward wind in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m eastward wind in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m eastward wind in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m eastward wind in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m eastward wind in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m eastward wind in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m eastward wind in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_100m_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m eastward wind in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m eastward wind in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_100m_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m eastward wind above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m eastward wind above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m eastward wind in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m eastward wind in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m eastward wind in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m eastward wind in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'eastward_wind_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m eastward wind in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m eastward wind in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_100m_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m northward wind in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m northward wind in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_100m_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m northward wind above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m northward wind above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_100m_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m northward wind in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m northward wind in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_100m_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m northward wind in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m northward wind in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_100m_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m northward wind in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m northward wind in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m northward wind in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m northward wind in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m northward wind in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m northward wind in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'air_temperature_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 2m air temperature in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 2m air temperature in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_100m_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m northward wind in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m northward wind in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m northward wind above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m northward wind above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m northward wind in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m northward wind in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'precipitation_amount_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Accumulated precipitation in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Accumulated precipitation in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m northward wind in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m northward wind in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m northward wind in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m northward wind in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'precipitation_amount_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Accumulated precipitation above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Accumulated precipitation above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'precipitation_amount_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Accumulated precipitation in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Accumulated precipitation in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'surface_downwelling_shortwave_flux_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Surface downwelling shortwave flux above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Surface downwelling shortwave flux above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_100m_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m northward wind in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m northward wind in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'precipitation_amount_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Accumulated precipitation in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Accumulated precipitation in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'precipitation_amount_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Accumulated precipitation in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Accumulated precipitation in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'precipitation_amount_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Accumulated precipitation in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Accumulated precipitation in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'northward_wind_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m northward wind in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m northward wind in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'surface_downwelling_shortwave_flux_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Surface downwelling shortwave flux in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Surface downwelling shortwave flux in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'surface_downwelling_shortwave_flux_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Surface downwelling shortwave flux in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Surface downwelling shortwave flux in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'surface_downwelling_shortwave_flux_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Surface downwelling shortwave flux in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Surface downwelling shortwave flux in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'surface_downwelling_shortwave_flux_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Surface downwelling shortwave flux in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Surface downwelling shortwave flux in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_100m_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m wind speed above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m wind speed above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_100m_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m wind speed in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m wind speed in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_100m_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m wind speed in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m wind speed in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'surface_downwelling_shortwave_flux_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Surface downwelling shortwave flux in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Surface downwelling shortwave flux in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_100m_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m wind speed in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m wind speed in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_100m_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m wind speed in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m wind speed in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_100m_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m wind speed in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m wind speed in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_prob_lower_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m wind speed in lower decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m wind speed in lower decile', 'description': 'Probability that the forecast falls in the bottom 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_100m_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 100m wind speed in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 100m wind speed in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'surface_downwelling_shortwave_flux_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Surface downwelling shortwave flux in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Surface downwelling shortwave flux in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m wind speed in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m wind speed in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'precipitation_amount_prob_upper_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of Accumulated precipitation in upper quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of Accumulated precipitation in upper quintile', 'description': 'Probability that the forecast falls in the top 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_prob_lower_quintile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m wind speed in lower quintile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m wind speed in lower quintile', 'description': 'Probability that the forecast falls in the bottom 20% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_prob_lower_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m wind speed in lower tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m wind speed in lower tercile', 'description': 'Probability that the forecast falls in the bottom 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_prob_upper_decile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m wind speed in upper decile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m wind speed in upper decile', 'description': 'Probability that the forecast falls in the top 10% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_prob_abnorm'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m wind speed above normal
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m wind speed above normal', 'description': 'Probability that the forecast value exceeds the ERA5 1991-2020 climatological mean. Values range from 0 to 1.'})
+
+  • Variable Name: 'wind_speed_prob_upper_tercile'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'latitude', 'longitude') | Shape=(90, 46, 361, 720)
+    - Description: Prob. of 10m wind speed in upper tercile
+    - Units      : 1
+    - Data Scale : (Attributes Metadata: {'units': '1', 'long_name': 'Prob. of 10m wind speed in upper tercile', 'description': 'Probability that the forecast falls in the top 33.3% of the ERA5 1991-2020 climatological distribution. Values range from 0 to 1.'})
+
+
+######################################################################
+ GROUP PATH: percentiles
+######################################################################
+
+[1] DIMENSIONS & CORE AXES:
+  * Total Dimensions: {'reference_time': 90, 'step': 46, 'percentile': 9, 'latitude': 361, 'longitude': 720}
+  * Coordinate 'longitude': shape=(720,), dtype=float64
+  * Coordinate 'percentile': shape=(9,), dtype=int64
+  * Coordinate 'reference_time': shape=(90,), dtype=datetime64[ns]
+    - Temporal Range : 2026-01-01 00:00 TO 2026-03-31 00:00
+    - Step Frequency : Count=90
+  * Coordinate 'step': shape=(46,), dtype=timedelta64[D]
+    - Forecast Steps : Min=1 days, Max=46 days (Total Steps: 46)
+  * Coordinate 'latitude': shape=(361,), dtype=float64
+
+[2] DATA VARIABLES MANIFEST:
+  • Variable Name: 'air_pressure_at_sea_level_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: Mean sea level pressure (ensemble percentiles)
+    - Units      : Pa
+    - Data Scale : (Attributes Metadata: {'units': 'Pa', 'long_name': 'Mean sea level pressure (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of atmospheric pressure reduced to mean sea level. 24-hour ensemble mean.'})
+
+  • Variable Name: 'eastward_wind_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: 10m eastward wind (ensemble percentiles)
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': '10m eastward wind (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of eastward component of the 10m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'eastward_wind_100m_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: 100m eastward wind (ensemble percentiles)
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': '100m eastward wind (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of eastward component of the 100m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'air_temperature_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: 2m air temperature (ensemble percentiles)
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'units': 'K', 'long_name': '2m air temperature (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of air temperature at 2 metres above the surface. 24-hour ensemble mean.'})
+
+  • Variable Name: 'geopotential_thickness_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: Geopotential thickness (ensemble percentiles)
+    - Units      : m
+    - Data Scale : (Attributes Metadata: {'units': 'm', 'long_name': 'Geopotential thickness (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of thickness between isobaric pressure surfaces. 24-hour ensemble mean.'})
+
+  • Variable Name: 'northward_wind_100m_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: 100m northward wind (ensemble percentiles)
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': '100m northward wind (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of northward component of the 100m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'air_temperature_min_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: 2m minimum air temperature (ensemble percentiles)
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'units': 'K', 'long_name': '2m minimum air temperature (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of minimum air temperature at 2 metres above the surface over the 24-hour forecast period. Ensemble minimum.'})
+
+  • Variable Name: 'surface_downwelling_shortwave_flux_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: Surface downwelling shortwave flux (ensemble percentiles)
+    - Units      : W m-2
+    - Data Scale : (Attributes Metadata: {'units': 'W m-2', 'long_name': 'Surface downwelling shortwave flux (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of downwelling shortwave (solar) radiation at the surface, comprising both direct and diffuse components. 24-hour ensemble mean.'})
+
+  • Variable Name: 'northward_wind_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: 10m northward wind (ensemble percentiles)
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': '10m northward wind (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of northward component of the 10m wind. 24-hour ensemble mean.'})
+
+  • Variable Name: 'precipitation_amount_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: Accumulated precipitation (ensemble percentiles)
+    - Units      : kg m-2
+    - Data Scale : (Attributes Metadata: {'units': 'kg m-2', 'long_name': 'Accumulated precipitation (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of total accumulated precipitation over the 24-hour forecast period, computed as the ensemble mean.'})
+
+  • Variable Name: 'wind_speed_100m_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: 100m wind speed (ensemble percentiles)
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': '100m wind speed (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of wind speed at 100 metres above the surface. 24-hour ensemble mean.'})
+
+  • Variable Name: 'wind_speed_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: 10m wind speed (ensemble percentiles)
+    - Units      : m s-1
+    - Data Scale : (Attributes Metadata: {'units': 'm s-1', 'long_name': '10m wind speed (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of wind speed at 10 metres above the surface. 24-hour ensemble mean.'})
+
+  • Variable Name: 'air_temperature_max_pctl'
+    - Grid Layout: Dimensions=('reference_time', 'step', 'percentile', 'latitude', 'longitude') | Shape=(90, 46, 9, 361, 720)
+    - Description: 2m maximum air temperature (ensemble percentiles)
+    - Units      : K
+    - Data Scale : (Attributes Metadata: {'units': 'K', 'long_name': '2m maximum air temperature (ensemble percentiles)', 'description': 'Percentile distribution (1st, 5th, 10th, 20th, 50th, 80th, 90th, 95th, 99th) across ensemble members of maximum air temperature at 2 metres above the surface over the 24-hour forecast period. Ensemble maximum.'})
+
